@@ -8,8 +8,11 @@ echo "SERVER \n";
 	echo "\n";
 }, $_SERVER);
  */
-print_r($_POST) . "\n";
+print_r($_REQUEST) . "\n";
 echo "GET \n";
 echo date('Y');
 
 echo "Hello world";
+if ($_SERVER['REQUEST_URI'] != '/'){
+	echo 'Page not found. <a href="/">main</a>';
+};
